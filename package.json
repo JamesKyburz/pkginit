@@ -1,6 +1,6 @@
 {
     "name" : "pkginit",
-    "version" : "0.0.0",
+    "version" : "0.0.1",
     "description" : "script building package.json files, like `npm init`",
     "main" : "index.js",
     "bin" : {
