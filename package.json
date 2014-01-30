@@ -1,6 +1,6 @@
 {
     "name" : "pkginit",
-    "version" : "0.0.1",
+    "version" : "0.0.2",
     "description" : "script building package.json files, like `npm init`",
     "main" : "index.js",
     "bin" : {
@@ -15,7 +15,7 @@
         "merge" : "~1.0.0",
         "prompter" : "~0.0.4",
         "mkdirp" : "~0.3.3",
-        "editor" : "~0.0.0"
+        "editor" : "~0.1.0"
     },
     "devDependencies" : {
         "tap" : "~0.2.5"
