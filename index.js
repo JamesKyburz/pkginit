@@ -1,8 +1,6 @@
 var mkdirp = require('mkdirp');
 var prompter = require('prompter');
 var merge = require('merge');
-var spawn = require('child_process').spawn;
-var exec = require('child_process').exec;
 var editor = require('editor');
 
 var fs = require('fs');
@@ -45,7 +43,6 @@ PkgInit.prototype.build = function (name, cb) {
     var self = this;
     var opts = self.opts;
     var stderr = opts.stderr || process.stderr;
-    var stdout = opts.stdout || process.stdout;
     var stdin = opts.stdin || process.stdin;
     var file = self.filename(name);
     stdin.on('data', function () {});
@@ -92,8 +89,3 @@ PkgInit.prototype.edit = function (name, opts, cb) {
         if (typeof cb === 'function') cb(code, sig)
     });
 };
-
-var tty = require('tty');
-function setRaw (mode) {
-    (process.stdin.setRawMode || tty.setRawMode)(mode);
-}
